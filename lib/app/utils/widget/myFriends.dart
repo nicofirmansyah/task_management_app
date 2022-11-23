@@ -18,7 +18,7 @@ class MyFriends extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children:  [ 
+                children: [
                   Text(
                     'My Friends',
                     style: TextStyle(
@@ -49,30 +49,30 @@ class MyFriends extends StatelessWidget {
               SizedBox(
                 height: 400,
                 child: GridView.builder(
-                  shrinkWrap: true,
-                  itemCount: 8,
-                  gridDelegate: 
-                const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount:3,
-                   crossAxisSpacing: 20,
-                   mainAxisSpacing: 20),
-                   itemBuilder: ((context, index) {
-                     return Column(
-                      children: [
+                    shrinkWrap: true,
+                    itemCount: 9,
+                    gridDelegate:
+                         SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: context.isPhone? 2 : 3,
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 20),
+                    itemBuilder: ((context, index) {
+                      return Column(
+                        children: [
                           ClipRRect(
-                          borderRadius:
-                              BorderRadius.circular(100),
-                          child: const Image(
-                           image: NetworkImage(
-                                'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'),
+                            borderRadius: BorderRadius.circular(100),
+                            child: const Image(
+                              image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'),
+                            ),
                           ),
-                        ),
-                        Text('Nico Firmansyah', style: TextStyle(color: AppColors.primaryText),)
-                      ],
-                     );
-                   })
-                  
-                  ),
+                          Text(
+                            'Nico Firmansyah',
+                            style: TextStyle(color: AppColors.primaryText),
+                          )
+                        ],
+                      );
+                    })),
               )
             ],
           ),
