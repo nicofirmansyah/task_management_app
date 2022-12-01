@@ -20,7 +20,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawerKey,
-      drawer: const SideBar(),
+      drawer: const SizedBox(width: 150, child: SideBar()),
       backgroundColor: AppColors.primaryBg,
       body: SafeArea(
         child: Row(
@@ -62,16 +62,16 @@ class HomeView extends GetView<HomeController> {
                                 Text(
                                   'Manage Task Made Easy With Friends',
                                   style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       color: AppColors.primaryText),
                                 ),
                               ],
                             ),
                             const Spacer(),
                             const Icon(Icons.notifications,
-                                color: AppColors.primaryText, size: 30),
+                                color: AppColors.primaryText, size: 25),
                             const SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(30),
@@ -105,7 +105,7 @@ class HomeView extends GetView<HomeController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: Get.height * 0.4,
+                            height: 280,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children:  const [
