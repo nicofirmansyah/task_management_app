@@ -62,9 +62,9 @@ class ProfileView extends GetView<ProfileController> {
                                       fontSize: 20, color: AppColors.primaryText),
                                 ),
                                 Text(
-                                  'Manage Task Made Easy With Friends',
+                                  'Manage Task Made Easy',
                                   style: TextStyle(
-                                      fontSize: 14, color: AppColors.primaryText),
+                                      fontSize: 12, color: AppColors.primaryText),
                                 ),
                               ],
                             ),
@@ -91,15 +91,15 @@ class ProfileView extends GetView<ProfileController> {
                                     'Sign Out',
                                     style: TextStyle(
                                         color: AppColors.primaryText,
-                                        fontSize: 16),
+                                        fontSize: 14),
                                   ),
                                   SizedBox(
-                                    width: 5,
+                                    width: 1,
                                   ),
                                   Icon(
                                     Icons.logout_outlined,
                                     color: AppColors.primaryText,
-                                    size: 30,
+                                    size: 25,
                                   ),
                                 ],
                               ),

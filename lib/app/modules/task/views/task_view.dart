@@ -52,14 +52,14 @@ class TaskView extends GetView<TaskController> {
               style: TextStyle(fontSize: 20, color: AppColors.primaryText),
               ),
             Text(
-              'Manage Task Made Easy With Friends',
-               style: TextStyle(fontSize: 14, color: AppColors.primaryText),
+              'Manage Task Made Easy',
+               style: TextStyle(fontSize: 12, color: AppColors.primaryText),
               ),
           ],
           ),
           const Spacer(),
           const Icon(Icons.notifications, 
-          color: AppColors.primaryText, size: 30
+          color: AppColors.primaryText, size: 25
           ),
           const SizedBox(
             width: 15,
