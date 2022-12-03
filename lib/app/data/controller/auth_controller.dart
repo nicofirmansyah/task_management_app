@@ -61,12 +61,12 @@ if (!cekUsers.exists) {
     'lastLoginAt':
     _userCredential!.user!.metadata.lastSignInTime.toString(),
    // 'list_cari': [N,NI,NIC,NICO]
-  }).then((value) {
+  }).then((value) async {
     String temp = '';
     try {
       for (var i = 0; i < googleUser.displayName!.length; i++) {
         temp = temp + googleUser.displayName![i];
-        users.doc(googleUser.email).set({
+        await users.doc(googleUser.email).set({
           'list_cari': FieldValue.arrayUnion([temp.toUpperCase()])
         }, SetOptions(merge: true));
       }
@@ -76,7 +76,7 @@ if (!cekUsers.exists) {
     }
   });
 } else{
-  users.doc(googleUser.email).set({
+  users.doc(googleUser.email).update({
     'lastLoginAt':
     _userCredential!.user!.metadata.lastSignInTime.toString(),
 
@@ -109,6 +109,7 @@ CollectionReference users = firestore.collection('users');
    }
 
    if (kataCari.isNotEmpty) {
+    hasilPencarian.value = [];
     kataCari.forEach((element) {
       print(element);
       hasilPencarian.add(element);

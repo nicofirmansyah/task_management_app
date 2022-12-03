@@ -136,7 +136,7 @@ class FriendsView extends GetView<FriendsController> {
                             const Text(
                               "People You May Know",
                               style: TextStyle(
-                                  fontSize: 30, color: AppColors.primaryText),
+                                  fontSize: 25, color: AppColors.primaryText),
                             ),
                             SizedBox(
                               height: 200,
